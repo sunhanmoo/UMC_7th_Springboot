@@ -10,10 +10,10 @@ import umc.study.service.StoreService.StoreQueryService;
 
 @SpringBootApplication
 @EnableJpaAuditing
-public class StudyApplication {
+public class Umc7thApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudyApplication.class, args);
+		SpringApplication.run(Umc7thApplication.class, args);
 	}
 
 	@Bean
@@ -25,7 +25,6 @@ public class StudyApplication {
 			String name = "요아정";
 			Float score = 4.0f;
 
-			System.out.println("말로/성호은 week 6 실습 완료: ");
 			// 쿼리 메서드 호출 및 쿼리 문자열과 파라미터 출력
 			System.out.println("Executing findStoresByNameAndScore with parameters:");
 			System.out.println("Name: " + name);
@@ -34,4 +33,5 @@ public class StudyApplication {
 			storeService.findStoresByNameAndScore(name, score)
 					.forEach(System.out::println);
 		};
-	}}
+	}
+}
